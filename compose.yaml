@@ -1,0 +1,12 @@
+services:
+  # name of the container
+  python-bindmount-test:
+    build:
+      context: ./app
+    volumes:
+      # content in my local directory ./app
+      # copy over to
+      # /usr/src/app in the container
+      - ./app:/usr/src/app
+    ports:
+      - 5379:5379
